@@ -1,34 +1,44 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Navbar from './Components/Navbar_home'
+import Hero from './Components/Hero'
+import Brands from './Components/Brands'
+import Features from './Components/Features'
+import How_does_it_work from './Components/How_does_it_work'
+import Functions from './Components/Functions'
+import Footer from './Components/Footer'
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [mode, setMode] = useState('light')
+
+  const changeMode = () => {
+    setMode( mode === 'light' ? 'dark' : 'light')
+  }
+
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+
+      <body className={`${mode}-theme`}>
+
+        <header>
+          <Navbar className='navbar' changeMode={changeMode}/>
+        </header>
+
+        <Hero /> 
+
+        <Brands />
+        
+        <Features />
+
+        <How_does_it_work />
+
+        <Functions />
+        
+
+        <Footer />
+
+      </body>
   )
 }
 
