@@ -700,15 +700,23 @@ body .FAQ-right-container .accordion-container .accordion-btn {
   border: none;
   text-align: left;
   font-size: 1em;
-  transition: 0.4s;
+  transition: 0.3s ;
+  
 }
 body .FAQ-right-container .accordion-container .accordion-btn .accordion-chevron {
   display: flex;
   justify-content: right;
   align-items: center;
-}
-body .FAQ-right-container .accordion-container .accordion-btn .accordion-chevron img {
   max-width: 80px;
+  scale: 0.9;
+  background-color: var(--background_alt_color);
+  border-radius: 50%;
+  padding: 0.8rem;
+  display: grid;
+    i {
+      place-items: center;
+      scale: 0.8;
+    }
 }
 body .FAQ-right-container .accordion-container .panel {
   padding: 0% 5% 0 5%;
@@ -716,8 +724,26 @@ body .FAQ-right-container .accordion-container .panel {
   background-color: var(--background_alt_color);
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.2s ease-out;
+  transition: max-height 0.3s ease;  
+  
 }
+
+
+
+body .FAQ-right-container .accordion-btn {
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  .rotated {
+    transform: rotate(180deg); 
+  }
+}
+body .FAQ-right-container .accordion-container .accordion-btn.active .accordion-chevron{
+  background-color: var(--silicon_purple); 
+}
+body .FAQ-right-container .accordion-container .accordion-chevron .toggle-img {
+  transition: transform 0.3s ease;
+}
+
 body .FAQ-mobile-button {
   display: none;
 }
@@ -922,6 +948,9 @@ body .mobile-footer {
     padding: 1% 3%;
     max-height: 10vh;
     font-size: 1.4em;
+    .accordion-chevron {
+      scale: 0.8;
+    }
   }
   body .FAQ-right-container .accordion-container .panel {
     font-size: 1.1rem;
@@ -937,6 +966,7 @@ body .mobile-footer {
     display: flex;
     width: 100%;
     justify-content: center;
+    margin-top: 10%;
   }
   body .FAQ-tablet-container .left-container-boxes {
     width: 200%;
@@ -1016,15 +1046,7 @@ body .mobile-footer {
 }
 @media (max-width: 768px) {
   body {
-    /* HERO SECTION */
-    /* BRAND SECTION */
-    /*APP FEATURES SECTION*/
-    /*HDIW SECTION*/
-    /*FUNCTIONS SECTION*/
-    /*REVIEWS SECTION*/
-    /* FAQ */
-    /*SUBSCRIBE SECTION*/
-    /*FOOTER SECTION*/
+
   }
   body .color-theme {
     display: none;
@@ -1169,6 +1191,9 @@ body .mobile-footer {
   }
   body .FAQ-right-container .accordion-container .accordion-btn {
     font-size: 1rem;
+    .accordion-chevron {
+      scale: 0.7;
+    }
   }
   body .FAQ-right-container .accordion-container .panel {
     font-size: 0.8rem;
@@ -1193,6 +1218,7 @@ body .mobile-footer {
     color: #fff;
     border: 0;
     font-size: 1.1em;
+    margin-top: 30%;
     cursor: pointer;
     transition: scale 0.1s ease;
   }
