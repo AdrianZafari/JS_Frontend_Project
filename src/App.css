@@ -820,6 +820,19 @@ body .subscribe-container .subscribe-email-bar .subscribe-button:hover {
 body .subscribe-container .subscribe-email-bar .subscribe-button:active {
   scale: 1;
 }
+body .confirmation-message {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  font-weight: 500;
+  padding-top: 2rem;
+}
+.success {
+  color: green;
+}
+.failure {
+  color: red;
+}
 body .footer {
   margin-top: auto;
   text-align: center;
@@ -830,17 +843,6 @@ body .mobile-footer {
   display: none;
 }
 @media (max-width: 1250px) {
-  body {
-    /*NAV BAR*/
-    /*HERO SECTION*/
-    /* BRANDS SECTION */
-    /*APP FEATURES SECTION*/
-    /*HDIW SECTION*/
-    /*FUNCTIONS SECTION*/
-    /*REVIEWS SECTION*/
-    /*FAQ*/
-    /*SUBSCRIBE SECTION*/
-  }
   body header {
     background-color: var(--background-normal);
   }
@@ -1045,9 +1047,7 @@ body .mobile-footer {
   }
 }
 @media (max-width: 768px) {
-  body {
 
-  }
   body .color-theme {
     display: none;
   }

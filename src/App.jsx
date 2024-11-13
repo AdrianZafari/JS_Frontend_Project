@@ -12,6 +12,7 @@ import AccordionItem from './Components/FAQ_Components/AccordionItem'
 import FAQ_Tablet_Container from './Components/FAQ_Components/FAQ_Tablet_Container'
 import FAQ_Mobile_container from './Components/FAQ_Components/FAQ_Mobile_container'
 import FAQ_Pre_Accordion from './Components/FAQ_Components/FAQ_Pre_Accordion'
+import Subscribe from './Components/Subscribe'
 
 
 function App() {
@@ -98,35 +99,7 @@ function App() {
           <FAQ_Mobile_container />
         </section>
 
-        <section id="subscribe">
-        
-            <div className="subscribe-container">
-                <div className="subscribe-text-container">
-                    <div className="subscribe-icon">
-                        <img src="images/subscribe/notification-icon-1.svg.svg" alt="bell" />
-                    </div>
-
-                    <h3 className="subscribe-desktop-text">
-                        Subscribe to our newsletter to stay<br/>informed about latest updates
-                    </h3>
-
-                    <h3 className="subscribe-tablet-text">Subscribe to our<br/> newsletter </h3>
-                </div>
-
-                <form action="#" method="post" className="subscribe-email-bar">
-                    <input 
-                        type="email" 
-                        placeholder="Your Email" 
-                        className="email-input" 
-                        pattern="^[^@\s]+@[^@\s]+\.[^@\s]+$" 
-                        title="Please enter a valid email address." 
-                        required 
-                    />
-                    <input type="submit" value="Subscribe" className="subscribe-button" />
-                </form>
-            </div>
-            
-        </section>
+        <Subscribe />
 
         {/* {console.log(subscribeForm)} */}
 
