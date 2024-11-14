@@ -10,7 +10,7 @@ function Shortcuts() {
           <Shortcut href={"#FAQ"} href_name={'FAQ'} /> 
           <Shortcut href={"#subscribe"} href_name={'Subscribe'} /> 
           <hr className="seperator"/>
-          <Shortcut href={"#Contact"} href_name={'Contact'} /> 
+          <Shortcut href={"/Contact"} href_name={'Contact'} /> 
       </ul>
   )
 }

@@ -1,21 +1,19 @@
 import Logo from "./Navbar_components/Logo"
-import Right_navbar_container from "./Navbar_components/Right-Navbar-continer/Right_navbar_container"
+import Right_navbar_home from "./Navbar_components/Right-Navbar-continer/Right_navbar_home"
 import Shortcuts_home from "./Navbar_components/Shortcuts/Shortcuts_home"
 
-function Navbar({changeMode}) {
+function Navbar_home({changeMode, mode}) {
 
 
   return (
-    <div className="navbar">
-    
+
+      <header>
+        <div className="navbar">
             <Logo  />
-            
-            {/* Shortcuts */}
             <Shortcuts_home />
-    
-            <Right_navbar_container changeMode={changeMode}/>
-    
+            <Right_navbar_home mode = {mode} changeMode={changeMode}/>
         </div>
+      </header>
   )
 }
-export default Navbar
+export default Navbar_home

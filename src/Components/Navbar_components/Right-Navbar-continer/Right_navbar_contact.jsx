@@ -1,7 +1,7 @@
 import { useState } from "react"
 import Mode_toggle from "./components/Mode_toggle"
 
-function Right_navbar_container( {changeMode} ) {
+function Right_navbar_home( {changeMode, mode} ) {
 
   const [isOpen, setIsOpen] = useState(false)
 
@@ -13,7 +13,7 @@ function Right_navbar_container( {changeMode} ) {
     <div className="right-navbar-container">
       <div className="theme-toggle-container">
 
-          <Mode_toggle changeMode={changeMode} />
+          <Mode_toggle mode = {mode} changeMode={changeMode} />
     
           <a href="#Sign-in" className="action_btn">
               <div className="user-icon">
@@ -24,13 +24,10 @@ function Right_navbar_container( {changeMode} ) {
 
           {/* Dropdown Menu Contents */}
           <div className={`dropdown_menu ${isOpen ? "open" : ""}`}>
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#brands">Features</a></li>
-            <li id="dropdown-reviews"><a href="#reviews">Reviews</a></li>
-            <li><a href="#FAQ">FAQ</a></li>
-            <li><a href="#subscribe">Subscribe</a></li>
+            <li><a href="#contactUs">Contact</a></li>
+            <li><a href="#location">Location</a></li>
             <hr className="seperator-dropdown"/>
-            <li ><a href="#Contact"> Contact </a></li>
+            <li ><a href="/"> Home </a></li>
             <a href="#Sign-in" className="action_btn" id="action_btn_dropdown">
               <div className="user-icon">
                 <img src="images/Header/desktop_only/User_Icon.svg" alt="User icon" />
@@ -47,4 +44,4 @@ function Right_navbar_container( {changeMode} ) {
     </div>
   )
 }
-export default Right_navbar_container
+export default Right_navbar_home
