@@ -66,12 +66,16 @@ body li {
 body .seperator{
   border-left: 2px solid var(--subtext_purple);
 }
-body a {
+body .navbar a {
   text-decoration: none;
   color: var(--subtext_purple);
+  text-decoration: none;
   font-size: 1em;
   font-weight: 500;
   transition: font-size 0.2s ease;
+}
+body .sign-in-text {
+  color: #fff;
 }
 body .links a:hover {
   color: var(--silicon_purple);
@@ -663,6 +667,7 @@ body .FAQ-left-container .left-container-boxes .contact-box a {
 body .FAQ-left-container .left-container-boxes .contact-box a #call {
   color: var(--silicon_purple);
   text-wrap: nowrap;
+  text-decoration: none;
   font-weight: 600;
   font-size: 0.9em;
 }
@@ -833,6 +838,125 @@ body .confirmation-message {
 .failure {
   color: red;
 }
+
+/* CONTACT PAGE */
+
+body #contactUs {
+  display: flex;
+  flex-direction: column;
+  padding: 5% 10% 0 10%;
+  background-color: var(--background_alt_color);
+  justify-content: space-between;
+  padding-bottom: 2rem;
+}
+
+body .breadcrumbs {
+  font-size: 0.8rem;
+  display: flex;
+  gap: 1em;
+  margin: 1rem 0;
+  margin-bottom: 1rem;
+  align-items: center;
+  justify-content: left;
+}
+
+body .breadcrumb-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--footer_color);
+
+}
+
+body .breadcrumb-item:hover {
+  color: var(--silicon_purple);
+}
+
+body .current {
+  color: var(--silicon_purple);
+}
+
+body .contactUs-parent-container {
+  display: flex;
+}
+
+body .contactUs-left-container {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  min-height: 70vh;
+  gap: 4rem;
+
+  h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--title_color);
+  }
+}
+
+body .contactUs-items-Container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+  gap: 3rem;
+}
+
+body .contactUs-item {
+  display: flex;
+  gap: 1rem;
+  height: 17vh;  
+}
+
+body .contactUs-item-img {
+  width: 15%;
+  i {
+    
+    color: var(--silicon_purple);
+    background-color: var(--background-normal);
+    padding: 0.8rem;
+    border-radius: 50%;
+    scale: 1.5;
+  }
+}
+
+body .contactUs-item-textbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  h3 {
+    font-size: 1.5em;
+    color: var(--title_color);
+  }
+   
+  p {
+    width: 80%;
+    color: var(--subtext_purple);
+    font-size: 1.1em;
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--silicon_purple);
+    display: flex;
+    align-items: center;
+    font-size: 1.1em;
+    font-weight: 500;
+    gap: 0.5em;
+  }
+}
+
+body .contactUs-right-container {
+
+}
+
+
+
+
+/* FOOTER */
+
 body .footer {
   margin-top: auto;
   text-align: center;
@@ -842,6 +966,13 @@ body .footer {
 body .mobile-footer {
   display: none;
 }
+
+
+
+
+/* RESPONSIVE DESIGN */
+
+
 @media (max-width: 1250px) {
   body header {
     background-color: var(--background-normal);
@@ -1045,7 +1176,16 @@ body .mobile-footer {
   body .subscribe-container .subscribe-email-bar .subscribe-button {
     font-size: 1rem;
   }
+
+  /* Contact Us Page */
+  body .breadcrumbs {
+    display: none;
+  }
+
+
 }
+
+
 @media (max-width: 768px) {
 
   body .color-theme {
@@ -1279,4 +1419,8 @@ body .mobile-footer {
   body .mobile-footer {
     display: block;
   }
+  
+  /*Contact Us Page*/
+
+  
 }
