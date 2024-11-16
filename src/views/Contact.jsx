@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import Navbar_contact from "../Components/Navbar_contact"
 import Footer from "../Components/Footer"
 import ContactUs from "../Components/ContactUs"
+import Location from "../Components/Location"
 
 
 
@@ -25,6 +26,7 @@ const Contact = () => {
       <body className={`${mode}-theme`}>
         <Navbar_contact className='navbar' mode = {mode} changeMode={changeMode}/>
         <ContactUs />
+        <Location />
         <Footer />
       </body>
     </>

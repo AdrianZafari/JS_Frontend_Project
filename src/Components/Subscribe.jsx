@@ -72,7 +72,7 @@ function Subscribe() {
                 </form>
             </div>
             {message && 
-              <p className={`confirmation-message ${message === "Thank you for subscribing!" ? 'success' : 'failure'}`}>
+              <p className={`confirmation-message ${message === "Thank you for subscribing!" ? 'success' : 'error-message'}`}>
                 {message}
               </p>
             }

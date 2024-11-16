@@ -1,5 +1,6 @@
 // import { useState } from "react";
 import Breadcrumbs from "./Breadcrumbs"
+import Consultation_form from "./ContactUs_Components/Consultation_form"
 import ContactUs_left_panel from "./ContactUs_Components/ContactUs_left_panel"
 
 function ContactUs() {
@@ -27,8 +28,10 @@ function ContactUs() {
     <div className="contactUs-parent-container">
       <ContactUs_left_panel />
 
-      <div className="ContactUs-right">
+      <div className="contactUs-right-container">
       <h2>Get Online Consultation</h2>
+
+      <Consultation_form />
 
       </div>
 
